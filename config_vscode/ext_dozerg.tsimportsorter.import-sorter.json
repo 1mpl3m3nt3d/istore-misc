@@ -1,0 +1,72 @@
+{
+  // Configuration file name.
+  // Not available in 'import-sorter.json' or 'package.json'.
+  "tsImportSorter.configuration.configurationFileName": "import-sorter.json",
+  // When to auto format imports/exports. Valid values are 'off' or 'onSave'.
+  "tsImportSorter.configuration.autoFormat": "onSave",
+  // Whether to format exports as well.
+  "tsImportSorter.configuration.formatExports": true,
+  // Disable formatting for files matching regular expressions.
+  "tsImportSorter.configuration.exclude": [
+    "node_modules"
+  ],
+  // Disable formatting for files matching glob patterns.
+  "tsImportSorter.configuration.excludeGlob": [],
+  // Sort import declarations by paths or first names. Valid values are 'paths' or 'names'.
+  "tsImportSorter.sortImportsBy": "paths",
+  // Grouping rules for path patterns for imports. {} is the fall-back group.
+  // Wiki: https://github.com/daidodo/format-imports/wiki/Grouping-Rules
+  "tsImportSorter.configuration.groupRules": [
+    "^react(-dom)?$",
+    "^@angular/",
+    "^vue$",
+    "^node:",
+    {},
+    "^[@]",
+    "^[.]"
+  ],
+  // Global Sorting rules. Valid values are 'none' or an object.
+  // Wiki: https://github.com/daidodo/format-imports/wiki/Sorting-Rules
+  "tsImportSorter.configuration.sortRules": {
+    // Sorting rule for import paths. Valid values are 'none' or an array.
+    "paths": [
+      "_",
+      "aA"
+    ],
+    // Sorting rule for imported/exported names. Valid values are 'none' or an array.
+    "names": [
+      "_",
+      "aA"
+    ]
+  },
+  // By default all unused imports are removed. Keep some or all them around with this
+  // setting via a list of regular expressions if you need.
+  // e.g. In order to keep all unused imports, use [".*"]
+  "tsImportSorter.configuration.keepUnused": [],
+  // Line wrapping style. Valid values are 'prettier' or an object.
+  // Wiki: https://github.com/daidodo/format-imports/wiki/Line-Wrapping-Style
+  // "tsImportSorter.configuration.wrappingStyle": "prettier"
+  "tsImportSorter.configuration.wrappingStyle": {
+    // Max binding names per line before wrapping for imports. 0 for no limit.
+    "maxBindingNamesPerLine": 1,
+    // Max default and binding names per line before wrapping for imports. 0 for no limit.
+    "maxDefaultAndBindingNamesPerLine": 2,
+    // Max binding names per line before wrapping for exports. 0 for no limit.
+    "maxExportNamesPerLine": 0,
+    // Max names on wrapped lines. 0 for no limit.
+    "maxNamesPerWrappedLine": 1,
+    // Whether to ignore trailing comments when counting line length.
+    "ignoreComments": false
+  },
+  // Number of empty lines between groups (NOT sub-groups).
+  "tsImportSorter.configuration.emptyLinesBetweenGroups": 1,
+  // Number of empty lines after the last import declaration.
+  "tsImportSorter.configuration.emptyLinesAfterAllImports": 1,
+  // Whether to remove the last slash when normalizing paths.
+  "tsImportSorter.configuration.removeLastSlashInPath": false, //true
+  // Whether to remove the last 'index' when normalizing paths.
+  "tsImportSorter.configuration.removeLastIndexInPath": false, //true
+  // Whether to enable debug mode and write detailed logs to VSCode output channel.
+  // Not available in 'import-sorter.json' or 'package.json'.
+  "tsImportSorter.configuration.development.enableDebug": false
+}
