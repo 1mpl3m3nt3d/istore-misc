@@ -143,6 +143,11 @@ git submodule [--quiet] foreach [--recursive] <command>
 git submodule [--quiet] sync [--recursive] [--] [<path>…​]
 git submodule [--quiet] absorbgitdirs [--] [<path>…​]
 
+git submodule update [--init] [--remote] [-N|--no-fetch] [--[no-]recommend-shallow]
+                     [-f|--force] [--checkout|--rebase|--merge] [--reference <repository>]
+                     [--depth <depth>] [--recursive] [--jobs <n>] [--[no-]single-branch]
+                     [--filter <filter spec>] [--] [<path>…​]
+
 git add .
 git add --renormalize .
 
@@ -179,10 +184,16 @@ git status --ignored
 
 git submodule init
 git submodule update
+git submodule update --checkout
+git submodule update --checkout --force
 git submodule update --init
 git submodule update --init --recursive
+git submodule update --merge
+git submodule update --rebase
 git submodule update --remote [SubmoduleName]
+git submodule update --remote --checkout
 git submodule update --remote --merge
+git submodule update --remote --no-fetch
 git submodule update --remote --rebase
 
 docker build --no-cache --pull [ServiceName]
