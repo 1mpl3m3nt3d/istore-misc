@@ -2,6 +2,11 @@
 
 cd /d %~dp0
 
+set folders=("%SystemDrive%\Users\%username%\AppData\Local\Temp\*" "%SystemDrive%\Users\%username%\AppData\Roaming\Temp\*" "%SystemDrive%\Users\%username%\AppData\Temp\*" "%SystemDrive%\Users\%username%\Temp\*" "%SystemDrive%\Users\Temp\*" "%SystemDrive%\Windows\Temp\*" "%SystemDrive%\Temp\*")
+
+for %%f in %folders% do del /f /s /q "%%f"
+for /d %%d in %folders% do rd "%%d" /s /q
+
 cd ..
 
 del /f /q "istore-basket\Basket.sln.DotSettings"
@@ -94,5 +99,25 @@ rd /s /q "istore-infrastructure\Infrastructure\Infrastructure\obj"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\.vs"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\bin"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\obj"
+
+cd istore-docker
+
+call docker compose stop --timeout 10
+call docker compose rm -f --stop --volumes
+call docker compose down --remove-orphans --rmi local --timeout 10 --volumes
+
+call docker image prune --all --force --filter "label=project=iStore_Basket.Host"
+call docker image prune --all --force --filter "label=project=iStore_Catalog.Host"
+call docker image prune --all --force --filter "label=project=iStore_IdentityServer"
+call docker image prune --all --force --filter "label=project=iStore_Web.Client"
+
+call docker container prune --force
+call docker network prune --force
+call docker volume prune --force
+call docker builder prune --all --force
+call docker buildx prune --all --force
+
+for %%f in %folders% do del /f /s /q "%%f"
+for /d %%d in %folders% do rd "%%d" /s /q
 
 pause
