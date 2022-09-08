@@ -111,11 +111,12 @@ call docker image prune --all --force --filter "label=project=iStore_Catalog.Hos
 call docker image prune --all --force --filter "label=project=iStore_IdentityServer"
 call docker image prune --all --force --filter "label=project=iStore_Web.Client"
 
-call docker container prune --force
-call docker network prune --force
-call docker volume prune --force
 call docker builder prune --all --force
 call docker buildx prune --all --force
+call docker container prune --force
+call docker image prune --force
+call docker network prune --force
+call docker volume prune --force
 
 for %%f in %folders% do del /f /s /q "%%f"
 for /d %%d in %folders% do rd "%%d" /s /q
