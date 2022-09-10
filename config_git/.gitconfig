@@ -1,6 +1,7 @@
 
 [core]
 	autocrlf = true
+  filemode = true
 [user]
 	email =
 	name =

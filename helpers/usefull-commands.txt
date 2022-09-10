@@ -22,6 +22,9 @@ corepack disable
 corepack prepare yarn@x.y.z --activate
 corepack prepare pnpm@x.y.z --activate
 
+corepack prepare yarn@stable --activate
+corepack prepare pnpm@stable --activate
+
 corepack prepare yarn@3.2.3 --activate
 corepack prepare pnpm@7.10.0 --activate
 
@@ -96,6 +99,15 @@ git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <paths
 git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]
 git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
 
+git checkout-index [-u] [-q] [-a] [-f] [-n] [--prefix=<string>]
+                   [--stage=<number>|all]
+                   [--temp]
+                   [--ignore-skip-worktree-bits]
+                   [-z] [--stdin]
+                   [--] [<file>…​]
+
+git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <path>…​
+
 git config [<file-option>] [--type=<type>] [--fixed-value] [--show-origin] [--show-scope] [-z|--null] <name> [<value> [<value-pattern>]]
 git config [<file-option>] [--type=<type>] --add <name> <value>
 git config [<file-option>] [--type=<type>] [--fixed-value] --replace-all <name> <value> [<value-pattern>]
@@ -111,6 +123,19 @@ git config [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-on
 git config [<file-option>] --get-color <name> [<default>]
 git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]
 git config [<file-option>] -e | --edit
+
+git ls-files [-z] [-t] [-v] [-f]
+             [-c|--cached] [-d|--deleted] [-o|--others] [-i|--|ignored]
+             [-s|--stage] [-u|--unmerged] [-k|--|killed] [-m|--modified]
+             [--directory [--no-empty-directory]] [--eol]
+             [--deduplicate]
+             [-x <pattern>|--exclude=<pattern>]
+             [-X <file>|--exclude-from=<file>]
+             [--exclude-per-directory=<file>]
+             [--exclude-standard]
+             [--error-unmatch] [--with-tree=<tree-ish>]
+             [--full-name] [--recurse-submodules]
+             [--abbrev[=<n>]] [--] [<file>…​]
 
 git remote [-v | --verbose]
 git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>
@@ -148,8 +173,27 @@ git submodule update [--init] [--remote] [-N|--no-fetch] [--[no-]recommend-shall
                      [--depth <depth>] [--recursive] [--jobs <n>] [--[no-]single-branch]
                      [--filter <filter spec>] [--] [<path>…​]
 
+git update-index [--add] [--remove | --force-remove] [--replace]
+                 [--refresh] [-q] [--unmerged] [--ignore-missing]
+                 [(--cacheinfo <mode>,<object>,<file>)…​]
+                 [--chmod=(+|-)x]
+                 [--[no-]assume-unchanged]
+                 [--[no-]skip-worktree]
+                 [--[no-]ignore-skip-worktree-entries]
+                 [--[no-]fsmonitor-valid]
+                 [--ignore-submodules]
+                 [--[no-]split-index]
+                 [--[no-|test-|force-]untracked-cache]
+                 [--[no-]fsmonitor]
+                 [--really-refresh] [--unresolve] [--again | -g]
+                 [--info-only] [--index-info]
+                 [-z] [--stdin] [--index-version <n>]
+                 [--verbose]
+                 [--] [<file>…​]
+
 git add .
 git add --renormalize .
+git add --chmod=+x [path-to-file]
 
 git checkout .
 
@@ -173,10 +217,14 @@ git diff --cached --submodule
 
 git init
 
+git ls-files --stage
+
 git push origin master
 git push --recurse-submodules=check
 git push --recurse-submodules=on-demand
 
+git rm --cached [file]
+git rm -r --cached [folder]
 git rm --cached -rf .
 
 git status
@@ -195,6 +243,8 @@ git submodule update --remote --checkout
 git submodule update --remote --merge
 git submodule update --remote --no-fetch
 git submodule update --remote --rebase
+
+git update-index --chmod=+x [path-to-file]
 
 docker build --no-cache --pull [ServiceName]
 docker build --no-cache --progress auto --pull --quiet [ServiceName]
