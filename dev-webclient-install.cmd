@@ -45,6 +45,7 @@ call yarn config set packageExtensions --json^
  \"material-table@*\": { \"dependencies\": { \"@emotion/react\": \"*\" } },^
  \"material-ui-popup-state@*\": { \"dependencies\": { \"react-dom\": \"*\" } },^
  \"npm-check-updates@*\": { \"dependencies\": { \"ini\": \"*\" } },^
+ \"react-router-dom@*\": { \"dependencies\": { \"@remix-run/router\": \"*\" } },^
  \"stylelint-config-recommended-scss@*\": { \"dependencies\": { \"postcss\": \"*\" } },^
  \"stylelint-config-xo-scss@*\": { \"dependencies\": { \"postcss\": \"*\" } } }^"
 echo.
