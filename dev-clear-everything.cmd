@@ -2,6 +2,15 @@
 
 cd /d %~dp0
 
+set folders=("%SystemDrive%\Users\%username%\AppData\Local\Temp\*" "%SystemDrive%\Users\%username%\AppData\Roaming\Temp\*" "%SystemDrive%\Users\%username%\AppData\Temp\*" "%SystemDrive%\Users\%username%\Temp\*" "%SystemDrive%\Users\Temp\*" "%SystemDrive%\Windows\Temp\*" "%SystemDrive%\Temp\*")
+
+echo.
+echo Clearing Temporary System Files & Folders ...
+echo.
+
+for %%f in %folders% do del /f /s /q "%%f"
+for /d %%d in %folders% do rd "%%d" /s /q
+
 cd ..
 
 echo.
@@ -117,6 +126,13 @@ rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\.vs"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\bin"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\keys"
 rd /s /q "istore-infrastructure\Infrastructure\Infrastructure.UnitTests\obj"
+
+echo.
+echo Clearing Temporary System Files & Folders ...
+echo.
+
+for %%f in %folders% do del /f /s /q "%%f"
+for /d %%d in %folders% do rd "%%d" /s /q
 
 echo.
 pause
