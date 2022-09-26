@@ -8,8 +8,8 @@ cd istore-webclient
 
 echo.
 echo Cleaning...
-
 echo.
+
 del /f /q ".pnp.cjs"
 del /f /q ".pnp.loader.mjs"
 del /f /q ".vim\coc-settings.json"

@@ -6,6 +6,10 @@ cd ..
 
 cd istore-webclient
 
+echo.
+echo Cleaning...
+echo.
+
 del /f /q ".pnp.cjs"
 del /f /q ".pnp.loader.mjs"
 del /f /q ".yarn\install-state.gz"
@@ -21,4 +25,8 @@ rd /s /q "build"
 rd /s /q "node_modules"
 rd /s /q "obj"
 
+echo.
+echo Done!
+
+echo.
 pause
