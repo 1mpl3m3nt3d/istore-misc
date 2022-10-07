@@ -2,6 +2,7 @@
 
 cd /d %~dp0
 
+echo.
 call code --install-extension aaron-bond.better-comments
 call code --install-extension alefragnani.Bookmarks
 call code --install-extension alefragnani.project-manager
@@ -22,8 +23,10 @@ call code --install-extension dbaeumer.jshint
 call code --install-extension dbaeumer.vscode-eslint
 call code --install-extension declanzou.index-generator
 call code --install-extension deque-systems.vscode-axe-linter
+call code --install-extension dongido.sync-env
 call code --install-extension donjayamanne.git-extension-pack
 call code --install-extension donjayamanne.githistory
+call code --install-extension dotenv.dotenv-vscode
 call code --install-extension dozerg.tsimportsorter
 call code --install-extension dracula-theme.theme-dracula
 call code --install-extension eamodio.gitlens
@@ -50,18 +53,22 @@ call code --install-extension ivangabriele.vscode-heroku
 call code --install-extension JayFong.generate-index
 call code --install-extension jbockle.jbockle-format-files
 call code --install-extension jnbt.vscode-rufo
-call code --install-extension JounQin.vscode-mdx
 call code --install-extension joy-yu.css-snippets
 call code --install-extension jtr.vscode-position
+call code --install-extension joostlubach.js-index
 call code --install-extension kaiwood.endwise
+call code --install-extension kingdaro.generate-index
 call code --install-extension koichisasada.vscode-rdbg
 call code --install-extension lacroixdavid1.vscode-format-context-menu
 call code --install-extension logerfo.procfile-support
 call code --install-extension mark-tucker.aws-cli-configure
+call code --install-extension maxcutlyp.dotenv-autocomplete
+call code --install-extension mechatroner.rainbow-csv
 call code --install-extension mgmcdermott.vscode-language-babel
 call code --install-extension mhutchie.git-graph
 call code --install-extension miguel-savignano.ruby-symbols
 call code --install-extension mike-co.import-sorter
+call code --install-extension mikestead.dotenv
 call code --install-extension mindaro-dev.file-downloader
 call code --install-extension mindaro.mindaro
 call code --install-extension misogi.ruby-rubocop
@@ -89,6 +96,7 @@ call code --install-extension ms-vscode.vscode-typescript-next
 call code --install-extension mscolnick.export-typescript
 call code --install-extension NathanRidley.autotrim
 call code --install-extension natqe.reload
+call code --install-extension Nixon.env-cmd-file-syntax
 call code --install-extension NuclleaR.vscode-extension-auto-import
 call code --install-extension octref.vetur
 call code --install-extension oderwat.indent-rainbow
@@ -96,6 +104,7 @@ call code --install-extension Orta.vscode-jest
 call code --install-extension PKief.material-icon-theme
 call code --install-extension pkosta2005.heroku-command
 call code --install-extension rebornix.ruby
+call code --install-extension redhat.vscode-xml
 call code --install-extension redhat.vscode-yaml
 call code --install-extension ritwickdey.LiveServer
 call code --install-extension robole.markdown-snippets
@@ -113,7 +122,6 @@ call code --install-extension shopify.ruby-extensions-pack
 call code --install-extension shopify.ruby-lsp
 call code --install-extension shopify.vscode-shadowenv
 call code --install-extension sidthesloth.html5-boilerplate
-call code --install-extension silvenon.mdx
 call code --install-extension sorbet.sorbet-vscode-extension
 call code --install-extension sourcegraph.sourcegraph
 call code --install-extension sourcegraph.vscode-sourcegraph-theme
@@ -125,13 +133,17 @@ call code --install-extension streetsidesoftware.code-spell-checker-ukrainian
 call code --install-extension stringham.move-ts
 call code --install-extension stylelint.vscode-stylelint
 call code --install-extension sunjw.jstool
+call code --install-extension svipas.code-autocomplete
 call code --install-extension tabnine.tabnine-vscode
 call code --install-extension temitope1909.dotenv-intellisense
 call code --install-extension TimonVS.ReactSnippetsStandard
+call code --install-extension tsugitta.create-index
 call code --install-extension Tyriar.lorem-ipsum
+call code --install-extension unifiedjs.vscode-mdx
 call code --install-extension unifiedjs.vscode-remark
 call code --install-extension unional.vscode-sort-package-json
 call code --install-extension vayan.haml
+call code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
 call code --install-extension VisualStudioExptTeam.vscodeintellicode
 call code --install-extension vscode-icons-team.vscode-icons
 call code --install-extension wayou.vscode-todo-highlight
@@ -142,4 +154,5 @@ call code --install-extension xyc.vscode-mdx-preview
 call code --install-extension yzhang.markdown-all-in-one
 call code --install-extension ziyasal.vscode-open-in-github
 
+echo.
 pause

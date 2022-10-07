@@ -5,6 +5,7 @@ cd /d %~dp0
 echo.
 set /p drive="Enter the letter of the prefered drive: "
 
+echo.
 call vs_Community.exe --layout %drive%:\VSCLayout --useLatestInstaller
 
 ::rem --noWeb ^
@@ -49,6 +50,6 @@ call vs_Community.exe --layout %drive%:\VSCLayout --useLatestInstaller
 
 echo.
 echo ErrorLevel = %ErrorLevel%
-echo.
 
+echo.
 pause

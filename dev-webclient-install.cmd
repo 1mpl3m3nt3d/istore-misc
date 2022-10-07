@@ -39,6 +39,7 @@ call yarn config set nodeLinker pnp
 echo.
 call yarn config set packageExtensions --json^
  ^"{ \"@mui/x-date-pickers@*\": { \"dependencies\": { \"react-dom\": \"*\" } },^
+ \"@svgr/core@*\": { \"dependencies\": { \"@babel/core\": \"*\" } },^
  \"chalk@*\": { \"dependencies\": { \"#ansi-styles\": \"npm:ansi-styles@*\", \"#supports-color\": \"npm:supports-color@*\" } },^
  \"eslint-config-react-app@*\": { \"dependencies\": { \"@babel/plugin-syntax-flow\": \"*\", \"@babel/plugin-transform-react-jsx\": \"*\" } },^
  \"material-react-table@*\": { \"dependencies\": { \"react-dom\": \"*\" } },^

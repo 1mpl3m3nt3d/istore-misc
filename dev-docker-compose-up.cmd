@@ -6,6 +6,8 @@ cd ..
 
 cd istore-docker
 
+echo.
 docker compose -f docker-compose.yml -f docker-compose.override.yml up --force-recreate --pull missing --remove-orphans -d
 
+echo.
 pause

@@ -2,6 +2,7 @@
 
 cd /d %~dp0
 
+echo.
 docker pull alpine:latest
 docker pull couchdb:3
 docker pull couchdb:latest
@@ -87,4 +88,5 @@ docker pull redis:alpine
 docker pull redis:bullseye
 docker pull redis:latest
 
+echo.
 pause

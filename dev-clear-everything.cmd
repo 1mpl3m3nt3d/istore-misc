@@ -8,7 +8,9 @@ echo.
 echo Clearing Temporary System Files and Folders ...
 echo.
 
+echo.
 for %%f in %folders% do del /f /s /q "%%f"
+echo.
 for /d %%d in %folders% do rd "%%d" /s /q
 
 cd ..
@@ -131,7 +133,9 @@ echo.
 echo Clearing Temporary System Files and Folders ...
 echo.
 
+echo.
 for %%f in %folders% do del /f /s /q "%%f"
+echo.
 for /d %%d in %folders% do rd "%%d" /s /q
 
 echo.

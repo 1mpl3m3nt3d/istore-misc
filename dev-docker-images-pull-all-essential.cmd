@@ -2,6 +2,7 @@
 
 cd /d %~dp0
 
+echo.
 docker pull couchdb:latest
 docker pull dpage/pgadmin4:latest
 docker pull elasticsearch:8.2.3
@@ -30,4 +31,5 @@ docker pull rabbitmq:latest
 docker pull rabbitmq:management
 docker pull redis:latest
 
+echo.
 pause

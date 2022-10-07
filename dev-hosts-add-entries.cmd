@@ -2,6 +2,8 @@
 
 cls
 
+cd /d %~dp0
+
 :init_admin
   setlocal DisableDelayedExpansion
   set cmdInvoke=1
@@ -13,10 +15,10 @@ cls
 
 :check_privileges
   NET FILE 1>NUL 2>NUL
-  if '%errorlevel%' == '0' ( goto got_privileges ) else ( goto get_privileges )
+  if "%errorlevel%" == "0" ( goto got_privileges ) else ( goto get_privileges )
 
 :get_privileges
-  if '%1'=='ELEV' (echo ELEV & shift /1 & goto got_privileges)
+  if "%1"=="ELEV" (echo ELEV & shift /1 & goto got_privileges)
 
   echo.
   echo **************************************
@@ -29,7 +31,7 @@ cls
   echo args = args ^& strArg ^& " "  >> "%vbsGetPrivileges%"
   echo Next >> "%vbsGetPrivileges%"
 
-  if '%cmdInvoke%'=='1' goto invoke_cmd
+  if "%cmdInvoke%"=="1" goto invoke_cmd
 
   echo UAC.ShellExecute "!batchPath!", args, "", "runas", 1 >> "%vbsGetPrivileges%"
   goto exec_elevation
@@ -44,9 +46,11 @@ cls
 
 :got_privileges
  setlocal & cd /d %~dp0
- if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
+ if "%1"=="ELEV" (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
 :prepare
+  cls
+
   cd /d %~dp0
 
   set hosts_file=%WINDIR%\System32\drivers\etc\hosts

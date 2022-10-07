@@ -5,6 +5,7 @@ cd /d %~dp0
 echo.
 set /p drive="Enter the letter of the prefered drive: "
 
+echo.
 start /wait %drive%:\VSCLayout\vs_Community.exe ^
 --locale en-US ^
 --installPath "C:\VSC" ^
@@ -50,6 +51,6 @@ start /wait %drive%:\VSCLayout\vs_Community.exe ^
 
 echo.
 echo ErrorLevel = %ErrorLevel%
-echo.
 
+echo.
 pause

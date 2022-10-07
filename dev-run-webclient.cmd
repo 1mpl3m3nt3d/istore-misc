@@ -6,6 +6,8 @@ cd ..
 
 cd istore-webclient
 
+echo.
 call yarn start
 
+echo.
 pause
