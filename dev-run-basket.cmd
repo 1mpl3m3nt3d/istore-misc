@@ -3,9 +3,10 @@
 cd /d %~dp0
 
 cd ..
+cd istore-basket
 
 echo.
-call dotnet run --configuration Release --project istore-basket/Basket/Basket.Host/Basket.Host.csproj
+call dotnet run --configuration Release --project Basket/Basket.Host/Basket.Host.csproj
 
 echo.
 pause

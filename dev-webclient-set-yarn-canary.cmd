@@ -6,6 +6,17 @@ cd ..
 cd istore-webclient
 
 echo.
+echo Installing...
+
+echo.
+call yarn set version canary --yarn-path
+
+echo.
+call yarn plugin import typescript
+echo.
+call yarn plugin import interactive-tools
+
+echo.
 call yarn config set --home enableTelemetry false
 
 echo.
@@ -73,6 +84,9 @@ echo.
 call yarn config set preferTruncatedLines false
 echo.
 call yarn config set progressBarStyle default
+
+echo.
+echo Done!
 
 echo.
 pause

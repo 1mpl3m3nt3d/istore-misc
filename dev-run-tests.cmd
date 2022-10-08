@@ -6,10 +6,8 @@ cd ..
 
 echo.
 call dotnet test istore-basket\.
-
 echo.
 call dotnet test istore-catalog\.
-
 echo.
 call dotnet test istore-identityserver\.
 
