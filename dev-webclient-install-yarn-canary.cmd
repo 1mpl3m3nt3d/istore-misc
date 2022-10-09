@@ -34,7 +34,7 @@ call yarn config set --home enableTelemetry false
 echo.
 call yarn config set enableColors true
 echo.
-call yarn config set enableGlobalCache true
+call yarn config set enableGlobalCache false
 echo.
 call yarn config set enableHyperlinks true
 echo.
