@@ -9,7 +9,7 @@ echo.
 wsl --shutdown
 
 echo.
-set /p drive="Enter the letter of the prefered drive: "
+set /p drive="Enter the letter of the preferred drive: "
 
 echo.
 mkdir %drive%:\wsl

@@ -3,7 +3,7 @@
 cd /d %~dp0
 
 echo.
-set /p drive="Enter the letter of the prefered drive: "
+set /p drive="Enter the letter of the preferred drive: "
 
 echo.
 start /wait %drive%:\VSCLayout\vs_Community.exe ^
